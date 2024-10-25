@@ -1,14 +1,5 @@
 pipeline {
-    agent any
-
-    stages {    
-        stage('Clone repo'){
-            steps{
-                cleanWs()
-                bat 'git clone https://github.com/Samson2343/2343_ISA2.git'
-                bar 'cd 2343_ISA2/'
-            }
-        }    
+    agent any 
         stage('Build docker image'){
             steps{
                 bat 'docker build -t flaskapp .'
