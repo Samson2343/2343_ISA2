@@ -1,10 +1,16 @@
 pipeline {
     agent any
 
-    stages {        
+    stages {    
+        sage(){
+            steps{
+                bat 'git clone https://github.com/Samson2343/2343_ISA2.git'
+                bar 'cd 2343_ISA2/'
+            }
+        }    
         stage('Build docker image'){
             steps{
-                 bat 'docker build -t flaskapp .'
+                bat 'docker build -t flaskapp .'
             }
         }
         stage('Delete container'){
