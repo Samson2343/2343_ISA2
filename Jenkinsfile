@@ -1,5 +1,8 @@
 pipeline {
-    agent any 
+    agent any
+
+    stages {    
+         
         stage('Build docker image'){
             steps{
                 bat 'docker build -t flaskapp .'
