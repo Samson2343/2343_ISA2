@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {    
-        stage(){
+        stage('Clone repo'){
             steps{
                 bat 'git clone https://github.com/Samson2343/2343_ISA2.git'
                 bar 'cd 2343_ISA2/'
